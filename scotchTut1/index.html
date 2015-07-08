@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<<html>
+<html>
 <head>
   <title>React Start</title>
-  <script src = "build.react.js"></script>
-  <script src="build/JSXTransformer"></script>
+  <script src = "../build/react.js"></script>
+  <script src="../build/JSXTransformer.js"></script>
 </head>
 <body>
-  <div id="mount-point"></div>
-  <script type="text/jsx">
-    //react code goes here
-  </script>
+ <div id="example"></div>
+    <script type="text/jsx">
+      React.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+    </script>
 </body>
 </html>
