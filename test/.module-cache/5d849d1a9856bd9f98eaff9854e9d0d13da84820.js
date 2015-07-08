@@ -13,7 +13,7 @@ var Counter = React.createClass({displayName: "Counter",
     return (
       React.createElement("div", {className: "my-component"}, 
         React.createElement("h2", null, " count: ", this.state.count, " "), 
-        React.createElement("button", {onClick: this.incCount}, "click to inc")
+        React.createElement("button", {onclick: this.incCount}, "click to inc")
       )
     );
   }

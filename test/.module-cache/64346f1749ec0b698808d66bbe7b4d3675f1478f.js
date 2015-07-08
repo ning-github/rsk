@@ -1,5 +1,6 @@
 var Counter = React.createClass({displayName: "Counter",
   incCount: function(){
+    console.log('asdf');
     this.setState({
       count: this.state.count + 1
     });
@@ -13,7 +14,7 @@ var Counter = React.createClass({displayName: "Counter",
     return (
       React.createElement("div", {className: "my-component"}, 
         React.createElement("h2", null, " count: ", this.state.count, " "), 
-        React.createElement("button", {onClick: this.incCount}, "click to inc")
+        React.createElement("button", {type: true, onclick: this.incCount}, "click to inc")
       )
     );
   }
