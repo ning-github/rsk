@@ -2,7 +2,9 @@
 
 1. Write in JSX
 2. Compile for production with:
-    jsx --watch srcFolderName/ createFolderName/
+```sh
+jsx --watch srcFolderName/ createFolderName/
+``` 
 3. Set createFolderName/fileName.js in html script tag as the result of JSX compiled into JS 
 
 # [React](https://facebook.github.io/react) [![Build Status](https://travis-ci.org/facebook/react.svg?branch=0.13-stable)](https://travis-ci.org/facebook/react)
