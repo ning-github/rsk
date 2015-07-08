@@ -1,0 +1,3 @@
+var Counter = React.createClass(
+
+  );

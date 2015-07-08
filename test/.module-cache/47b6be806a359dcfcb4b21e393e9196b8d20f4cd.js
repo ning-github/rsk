@@ -1,4 +1,4 @@
-var Counter = React.createClass({
+var Counter = React.createClass({displayName: "Counter",
   getInitialState: function(){
 
   },
@@ -6,7 +6,9 @@ var Counter = React.createClass({
 
   },
   render: function(){
-
+    
   }
+
+
 
 });
