@@ -15,6 +15,8 @@ jsx --extension jsx --watch srcFolderName/ createFolderName/
 
 Note that native HTML element names start with a lowercase letter, while custom React class names begin with an uppercase letter.
 
+unmounting and then re-mounting something will reset its state (think of counter button example)
+
 # [React](https://facebook.github.io/react) [![Build Status](https://travis-ci.org/facebook/react.svg?branch=0.13-stable)](https://travis-ci.org/facebook/react)
 
 React is a JavaScript library for building user interfaces.

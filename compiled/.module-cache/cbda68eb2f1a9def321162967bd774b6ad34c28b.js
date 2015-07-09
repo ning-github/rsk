@@ -1,4 +1,4 @@
-var Button = React.createClass({
+var Button = React.createClass({displayName: "Button",
   getInitialState: function(){
     return {val:0};
   },
@@ -10,31 +10,29 @@ var Button = React.createClass({
   render: function(){
     console.log(this.state.val);
     return (
-      <button onClick={this.update}>{this.state.val}</button>
+      React.createElement("button", {onClick: this.update}, this.state.val)
     )
   }
 
 });
 
-var App = React.createClass({
+var App = React.createClass({displayName: "App",
   mount: function(){
     // render the Button component from earlier
-    React.render(<Button />, document.getElementById('inc')); 
+    React.render(React.createElement(Button, null), document.getElementById('inc')); 
   },
   unmount: function(){
     // unmount
     React.unmountComponentAtNode(document.getElementById('inc'));
   },
   render: function(){
-    return (   
-      <div>
-        <button onClick={this.mount}>Mount</button>
-        <button onClick={this.unmount}>Unmount</button>
-        <div id='inc'></div>
-      </div>
+    React.createElement("div", null, 
+      React.createElement("button", {onClick: this.mount}, "Mount"), 
+      React.createElement("button", {onClick: this.unmount}, "Unmount")
+      
     )
   }
 });
 
 // React.render(<Button/>, document.getElementById('egghead'));
-React.render(<App />, document.getElementById('egghead'));
+React.render(React.createElement(App, null), document.getElementById('egghead'));

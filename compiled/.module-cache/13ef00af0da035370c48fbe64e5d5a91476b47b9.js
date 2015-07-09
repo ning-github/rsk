@@ -19,22 +19,19 @@ var Button = React.createClass({displayName: "Button",
 var App = React.createClass({displayName: "App",
   mount: function(){
     // render the Button component from earlier
-    React.render(React.createElement(Button, null), document.getElementById('inc')); 
+    React.render(React.createElement(Button, null), document.getElementById('egghead')); 
   },
   unmount: function(){
     // unmount
-    React.unmountComponentAtNode(document.getElementById('inc'));
+    React.unmountComponentAtNode(document.getElementById('egghead'));
   },
   render: function(){
-    return (   
-      React.createElement("div", null, 
-        React.createElement("button", {onClick: this.mount}, "Mount"), 
-        React.createElement("button", {onClick: this.unmount}, "Unmount"), 
-        React.createElement("div", {id: "inc"})
-      )
+    React.createElement("div", null, 
+      React.createElement("button", {onClick: this.mount}, "Mount"), 
+      React.createElement("button", {onClick: this.unmount}, "Unmount")
     )
   }
 });
 
 // React.render(<Button/>, document.getElementById('egghead'));
-React.render(React.createElement(App, null), document.getElementById('egghead'));
+React.render(React.createElement(App, null), document.body);

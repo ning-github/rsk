@@ -26,12 +26,10 @@ var App = React.createClass({displayName: "App",
     React.unmountComponentAtNode(document.getElementById('inc'));
   },
   render: function(){
-    return (   
-      React.createElement("div", null, 
-        React.createElement("button", {onClick: this.mount}, "Mount"), 
-        React.createElement("button", {onClick: this.unmount}, "Unmount"), 
-        React.createElement("div", {id: "inc"})
-      )
+    React.createElement("div", null, 
+      React.createElement("button", {onClick: this.mount}, "Mount"), 
+      React.createElement("button", {onClick: this.unmount}, "Unmount"), 
+      React.createElement("div", {id: "inc"})
     )
   }
 });
