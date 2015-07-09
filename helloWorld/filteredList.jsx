@@ -23,19 +23,30 @@ var FilteredList = React.createClass({
     this.setState({myItems: updatedList});
   },
   componentWillMount: function(){
-    // initialize the component when the filtered list is first rendered
-    this.setState({items: this.state.initialItems});
+    // initialize the component:
+    //    when the filtered list is first rendered,
+    //      all myItems choices displayed are from all intialItems
+    this.setState({myItems: this.state.initialItems});
   },
   render: function(){
     return (
       <div>
         <input placeHolder = "Search" onChange={this.filterThroughList}/>
         // TODO: display an inventory list under the search bar
+        <List items={this.state.myItems}/>
       </div>
     );
   }
 });
 
 var List = React.createClass({
-  
+  render: function(){
+    return (
+      <ul>
+        {
+          this.props.items.map
+        }
+      </ul>
+    );
+  }
 });
