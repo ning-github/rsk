@@ -28,7 +28,7 @@ var FilteredList = React.createClass({
   render: function(){
     return (
       <div>
-        <input onChange={this.filterThroughList}/>
+        <input placeHolder = "Search" onChange={this.filterThroughList}/>
 
       </div>
     );

@@ -2,10 +2,18 @@
 
 1. Write in JSX
 2. Compile for production with:
+for .js extension:
 ```sh
 jsx --watch srcFolderName/ createFolderName/
 ``` 
+for .jsx extension
+```sh
+jsx --extension jsx --watch srcFolderName/ createFolderName/
+``` 
+
 3. Set createFolderName/fileName.js in html script tag as the result of JSX compiled into JS 
+
+Note that native HTML element names start with a lowercase letter, while custom React class names begin with an uppercase letter.
 
 # [React](https://facebook.github.io/react) [![Build Status](https://travis-ci.org/facebook/react.svg?branch=0.13-stable)](https://travis-ci.org/facebook/react)
 
