@@ -1,4 +1,4 @@
-var FilteredList = React.createClass({
+var FilteredList = React.createClass({displayName: "FilteredList",
   getInitialState:  function(){
     return {
       initialItems: [
@@ -30,31 +30,31 @@ var FilteredList = React.createClass({
   },
   render: function(){
     return (
-      <div>
-        <input placeholder = "Search" onChange={this.filterThroughList}/>
-        {/* TODO: display an inventory list under the search bar */}
-        <List items={this.state.myItems}/>
-      </div>
+      React.createElement("div", null, 
+        React.createElement("input", {placeholder: "Search", onChange: this.filterThroughList}), 
+        "/** TODO: display an inventory list under the search bar */", 
+        React.createElement(List, {items: this.state.myItems})
+      )
     );
   }
 });
 
-var List = React.createClass({
+var List = React.createClass({displayName: "List",
   render: function(){
     return (
-      <ul>
-        {
+      React.createElement("ul", null, 
+        
           this.props.items.map(function(eachItem){
             return (
-              <li key={eachItem}> {eachItem} </li>
+              React.createElement("li", {key: eachItem}, " ", eachItem, " ")
             );
           })
-        }
-      </ul>
+        
+      )
     );
   }
 });
 
 React.render(
-  <FilteredList />, document.getElementById('filtered-list')
+  React.createElement(FilteredList, null), document.getElementById('filtered-list')
 );
