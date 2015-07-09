@@ -44,7 +44,7 @@ var List = React.createClass({displayName: "List",
     return (
       React.createElement("ul", null, 
         
-          this.props.items.map(function(eachItem){
+          this.props.items.forEach(function(eachItem){
             return (
               React.createElement("li", null, " ", eachItem, " ")
             );

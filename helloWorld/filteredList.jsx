@@ -31,7 +31,7 @@ var FilteredList = React.createClass({
   render: function(){
     return (
       <div>
-        <input placeHolder = "Search" onChange={this.filterThroughList}/>
+        <input placeholder = "Search" onChange={this.filterThroughList}/>
         // TODO: display an inventory list under the search bar
         <List items={this.state.myItems}/>
       </div>
@@ -44,9 +44,17 @@ var List = React.createClass({
     return (
       <ul>
         {
-          this.props.items.map
+          this.props.items.map(function(eachItem){
+            return (
+              <li> {eachItem} </li>
+            );
+          })
         }
       </ul>
     );
   }
 });
+
+React.render(
+  <FilteredList />, document.getElementById('filtered-list')
+);

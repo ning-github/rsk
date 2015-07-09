@@ -31,7 +31,7 @@ var FilteredList = React.createClass({displayName: "FilteredList",
   render: function(){
     return (
       React.createElement("div", null, 
-        React.createElement("input", {placeholder: "Search", onChange: this.filterThroughList}), 
+        React.createElement("input", {placeHolder: "Search", onChange: this.filterThroughList}), 
         "// TODO: display an inventory list under the search bar", 
         React.createElement(List, {items: this.state.myItems})
       )
@@ -44,7 +44,7 @@ var List = React.createClass({displayName: "List",
     return (
       React.createElement("ul", null, 
         
-          this.props.items.map(function(eachItem){
+          this.props.items.forEach(function(eachItem){
             return (
               React.createElement("li", null, " ", eachItem, " ")
             );
@@ -54,7 +54,3 @@ var List = React.createClass({displayName: "List",
     );
   }
 });
-
-React.render(
-  React.createElement(FilteredList, null), document.getElementById('filtered-list')
-);
