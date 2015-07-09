@@ -10,7 +10,7 @@ var FilteredList = React.createClass({
         'Fish',
         'Granola',
         'Hash Browns'
-      ],
+      ], 
       myItems: []
     };
   },
