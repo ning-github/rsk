@@ -46,7 +46,7 @@ var List = React.createClass({
         {
           this.props.items.map(function(eachItem){
             return (
-              <li> {eachItem} </li>
+              <li key={eachItem}> {eachItem} </li>
             );
           })
         }
