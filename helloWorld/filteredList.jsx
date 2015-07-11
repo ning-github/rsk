@@ -31,7 +31,7 @@ var FilteredList = React.createClass({
   render: function(){
     return (
       <div>
-        <input placeholder = "Search" onChange={this.filterThroughList}/>
+        <input type = "text" placeholder = "Search" onChange={this.filterThroughList}/>
         {/* TODO: display an inventory list under the search bar */}
         <List items={this.state.myItems}/>
       </div>
