@@ -13,7 +13,6 @@ var Button = React.createClass({displayName: "Button",
       React.createElement("button", {onClick: this.update}, this.state.val)
     )
   }
-
 });
 
 var App = React.createClass({displayName: "App",
