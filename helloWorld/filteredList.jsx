@@ -32,7 +32,7 @@ var FilteredList = React.createClass({
     return (
       <div>
         <input type = "text" placeholder = "Search" onChange={this.filterThroughList}/>
-        {/* TODO: display an inventory list under the search bar */}
+        {/* display an inventory list under the search bar */}
         <List items={this.state.myItems}/>
       </div>
     );

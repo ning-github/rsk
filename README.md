@@ -1,7 +1,10 @@
 #Notes
 
 1. Write in JSX
-2. Compile for production with:
+
+2a. gulp/browserify or webpack
+
+2b. OR Compile for production with:
 for .js extension:
 ```sh
 jsx --watch srcFolderName/ createFolderName/
